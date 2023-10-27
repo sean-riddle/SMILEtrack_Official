@@ -213,6 +213,10 @@ def detect():
                 print('Processing frame {}/{} ({:.2f} fps)'.format(fn, num_frames, 1. / max(1e-5, timer.average_time)))
 
     #res_file = opt.project + '/' + opt.name + ".txt"
+    import os 
+    if not os.path.exists("./YOLOX_outputs/yolov7" + '/track_results/'):
+        os.makedirs("./YOLOX_outputs/yolov7" + '/track_results/')
+        
     res_file = "./YOLOX_outputs/yolov7" + '/track_results/' + opt.name + ".txt"
     
     with open(res_file, 'w') as f:
