@@ -8,6 +8,8 @@ import torch
 import torch.backends.cudnn as cudnn
 from numpy import random
 
+sys.path.append('.')
+
 from prb.models.experimental import attempt_load
 from prb.utils.datasets import LoadStreams, LoadImages
 from prb.utils.general import check_img_size, check_requirements, check_imshow, non_max_suppression, \
@@ -19,12 +21,12 @@ from prb.utils.torch_utils import select_device, load_classifier, time_synchroni
 from tracker.mc_bot_sort import BoTSORT
 from tracker.tracking_utils.timer import Timer
 
-#from tracker.mc_bot_sort import BoTSORT
-from tracker.mc_bot_sort_copy import BoTSORT
+# from tracker.mc_bot_sort import BoTSORT
+# from tracker.mc_bot_sort_copy import BoTSORT
 from tracker.tracking_utils.timer import Timer
 
 sys.path.insert(0, './prb')
-sys.path.append('.')
+
 
 # Global
 trackerTimer = Timer()
